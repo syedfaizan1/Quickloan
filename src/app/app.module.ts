@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { PersonalLoansModule } from './personal-loans/personal-loans.module';
 import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     // material modules
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+   
+    
 
   ],
   providers: [],

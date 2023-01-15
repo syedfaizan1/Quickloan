@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { PersonalLoansRoutingModule } from './personal-loans-routing.module';
 import { PersonalLoansComponent } from '../personal-loans/personal-loans.component';
+import {MatSliderModule} from '@angular/material/slider'
+import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -11,7 +15,10 @@ import { PersonalLoansComponent } from '../personal-loans/personal-loans.compone
   ],
   imports: [
     CommonModule,
-    PersonalLoansRoutingModule
+    PersonalLoansRoutingModule,
+    MatSliderModule,
+    FormsModule,
+    MatButtonModule
   ],
   exports:[
     PersonalLoansComponent
