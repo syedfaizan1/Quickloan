@@ -10,6 +10,15 @@ export class PersonalLoansComponent implements OnInit {
 valueM:number=24
 valueR:number=10.99
 valueLA:number= 100000
+// cardtext
+longText = `Looking for an instant way to fund your larger expenses? Get an instant personal loan!
+
+But what is a personal loan? It is an attractive loan option that you can consider for various purposes without pledging any collateral. Whether you want to finance a medical emergency, take a much-needed family vacation, or give your home a long-awaited makeover, it  allows you to tackle your urgent financial needs with utmost ease.
+
+At Tata capital, we strive to ease your financial worries with our range of multipurpose personal loans online. Get affordable and unsecured credit of up to Rs. 35 lakhs at attractive interest rates. The best part? We have made the loan process extremely convenient for you with our digital application process and easy-to-meet eligibility criteria.
+
+Besides, we offer flexible loan tenure of up to 6 years, making your loan repayment much easier on your pocket. Get ready to experience a hassle-free loan process like never before – enjoy fast loan processing and customised instant personal loan offerings depending on your diverse financial needs.`;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -77,6 +86,15 @@ Emi:number=0
 //   }
 
   
-
+decreaseLA(loanAmount:number){
+  console.log('buttonclicked');
+  if(this.valueLA>75000){
+   this.valueLA-=500
+  }
+  else{
+     this.valueLA = 75000
+  }
+  
+}
 
 }

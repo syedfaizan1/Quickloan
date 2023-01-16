@@ -11,22 +11,28 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { PersonalLoansModule } from './personal-loans/personal-loans.module';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule,} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PersonalLoansModule,
+    ReactiveFormsModule,
     // material modules
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+  
    
     
 

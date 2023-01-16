@@ -1,0 +1,115 @@
+<div class="container-fluid my-4">
+    <img src="https://www.tatacapital.com/online/loans/personal-loans/assets/PL-Additional.jpg" alt="" class="img-fluid">
+</div>
+<div class="container">
+ 
+  <mat-stepper orientation="vertical" [linear]=false #stepper>
+    <mat-step [stepControl]="NewCustomer">
+      <form [formGroup]="NewCustomer">
+        <mat-form-field appearance="fill">
+          <mat-label>Employment Type</mat-label>
+          <mat-select [(ngModel)]="selectedEmployment" name="Employment_Type" formControlName="Employment_Type">
+            <mat-option *ngFor="let Employement of EmploymentArr" [value]="Employement.value">
+              {{Employement.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!-- <p> Selected food: {{selectedValue}} </p> -->
+        <ng-template matStepLabel>New Customer</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput type="number" placeholder="Mobile Number" formControlName="Mobile" required>
+        </mat-form-field>
+        <ng-container *ngIf="selectedEmployment!=='Self-employed'">
+        <mat-form-field appearance="fill">
+          <mat-label>PAN</mat-label>
+          <input matInput type="Text" placeholder="PAN no." formControlName="PAN" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label> Frist Name (As Per PAN*) </mat-label>
+          <input matInput type="Text" placeholder="Frist Name (As Per PAN*)" formControlName="FName" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name (As Per PAN*)</mat-label>
+          <input matInput type="Text" placeholder="Last Name (As Per PAN*)" formControlName="LName" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="Dob">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select [(ngModel)]="selectedGender" name="Gender" formControlName="Gender">
+            <mat-option *ngFor="let Gender of GenderArr" [value]="Gender.value">
+              {{Gender.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Pincode</mat-label>
+          <input matInput type="number" placeholder="Pincode" formControlName="Pincode" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>City</mat-label>
+          <input matInput type="text" placeholder="City" formControlName="City" required>
+        </mat-form-field>
+        </ng-container>
+        
+        <mat-checkbox formControlName="Agreement"> I/We agree to have read & understood the "Terms and Conditions" and confirm to the "declaration" provided in the link click here</mat-checkbox>
+        <div>
+          <button mat-button matStepperNext>Existing Customer</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="ExistingCustomer">
+      <form [formGroup]="ExistingCustomer">
+        <ng-template matStepLabel>Existing Customer</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile</mat-label>
+          <input matInput type="number" formControlName="Mobile" placeholder="Registered Mobile Number"
+                 required>
+        </mat-form-field><br>
+       
+       or  <a href="">Skip & continue as a guest</a>
+      
+        <div>
+          <button mat-button matStepperPrevious>New Customer</button>
+          <button mat-button matStepperNext>Track My Application</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Track my Application</ng-template>
+      <h3 class="text-primary text-center">TRACK MY APPLICATION</h3><br>
+      <p class="fw-bold text-center my-5">You can track your application by
+         entering either Mobile Number or PAN.</p>
+<form [formGroup]="TrackForm">
+         <mat-radio-group aria-label="Select an option" #radio1>
+          <mat-radio-button #mobileOp value="Mobile">Mobile</mat-radio-button>
+          <mat-radio-button #PANOp value="PAN">PAN</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field appearance="fill" *ngIf="TrackForm.controls['choose']?.value=='mobile'">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput type="number" placeholder="Mobile Number" formControlName="Mobile" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+          <mat-label>PAN</mat-label>
+          <input matInput type="Text" placeholder="PAN no." formControlName="PAN" required>
+        </mat-form-field>
+
+      </form>
+    
+      <div>
+        <button mat-button matStepperPrevious>Existing Customer</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

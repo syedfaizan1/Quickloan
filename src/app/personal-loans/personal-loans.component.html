@@ -3,7 +3,7 @@
         <h1 class="text-center">Personal Loan Emi Calculator</h1>
         <div class="row slider-con my-4 text-center ">
             <div class="col-md-4"> <p>Loan Amount</p>
-             <span class="bg-light  text-success fw-bold fs-5 px-4 rounded-pill">{{valueLA ? valueLA : '000'}}</span>&nbsp;&nbsp;₹ 
+             <span class="bg-light  text-success fw-bold fs-5 px-4 rounded-pill">{{valueLA ? valueLA : '000'}}</span>&nbsp;&nbsp;₹ &nbsp;
             <!-- <input type="number" class="form-control ms-2 text-center" maxlength="7"  value=75000 name="loanAmount" id="" [(ngModel)]="loanAmount.value" > -->
                 <mat-slider
   thumbLabel
@@ -40,7 +40,7 @@
                 aria-label="units" #months (valueChange)="onMonthChange(months.value)"(valueChange)="EmiCalculator()"></mat-slider>&nbsp;MO
             </div>
         </div>
-        <div class="row p-4 bg-light text-dark rounded-2 ms-2 ">
+        <div class="row p-4 bg-light text-dark rounded-2 ms-2 Emi-con ">
             <div class="col-md-4 ">
                <p class="fw-bold fs-5"> EMI Amount:</p>
             </div>
@@ -48,7 +48,7 @@
                 <span class="fw-bold fs-5">{{Emi | number :'1.2-2'}}</span>
              </div>
             <div class="col-md-4">
-                <button mat-flat-button>Apply now</button>
+                <button mat-flat-button routerLink="apply-now-personal">Apply now</button>
              </div>
     </div>
   
@@ -57,4 +57,22 @@
 
     </div>
    
+</div>
+
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>WHAT IS A PERSONAL LOAN?</mat-card-title>
+       
+         
+        </mat-card-title-group>
+        <div class="d-flex p-3">
+         
+            <mat-card-content>
+              {{longText}}
+            </mat-card-content>&nbsp;
+            <img mat-card-xl-image src="../../assets/images/personal_loan-side.jpg" >
+        </div>
+      
+      </mat-card>
 </div>
