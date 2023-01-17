@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ApplyNowPersonalComponent implements OnInit {
   selectedEmployment!: string;
+  trackApplicationMethod!:string
 
   
 
@@ -22,11 +23,11 @@ export class ApplyNowPersonalComponent implements OnInit {
     {value: 'Female', viewValue: 'Female'},
     {value: 'Other', viewValue: 'Other'},
   ];
-  NewCustomer = this._formBuilder.group({
+  NewCustomer:FormGroup = this._formBuilder.group({
     Employment_Type:['',[Validators.required]],
     Mobile: ['', Validators.required],
     PAN: ['', Validators.required],
-    FName: ['', Validators.required],
+    'FName': ['', Validators.required],
     LName: ['', Validators.required],
     Dob: ['', Validators.required],
     Gender: ['', Validators.required],
@@ -40,7 +41,6 @@ export class ApplyNowPersonalComponent implements OnInit {
   });
 
   TrackForm = this._formBuilder.group({
-    choose:['',[Validators.required]],
     Mobile: ['', Validators.required],
     PAN: ['', Validators.required],
   });
@@ -49,6 +49,22 @@ export class ApplyNowPersonalComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
+    
+  }
+
+  NewCustomerFormSubmit(){
+    if(this.NewCustomer.controls['Employment_Type'].value ==='Self-employed'){
+      this.NewCustomer.removeControl('FName');
+      this.NewCustomer.removeControl('LName');
+      this.NewCustomer.removeControl('PAN');
+      this.NewCustomer.removeControl('Dob');
+      this.NewCustomer.removeControl('Gender');
+      this.NewCustomer.removeControl('Pincode');
+      this.NewCustomer.removeControl('City');
+    }
+    console.log(this.NewCustomer.value);
+
+    this.NewCustomer.reset()
     
   }
 
