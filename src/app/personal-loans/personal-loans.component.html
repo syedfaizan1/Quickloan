@@ -59,7 +59,7 @@
    
 </div>
 
-<div class="container">
+<div class="container" >
     <mat-card class="example-card">
         <mat-card-title-group>
           <mat-card-title>WHAT IS A PERSONAL LOAN?</mat-card-title>
@@ -75,4 +75,24 @@
         </div>
       
       </mat-card>
+</div>
+<div class="title-block text-center"> <p class="h3 text-center">WHEN CAN YOU TAKE A PERSONAL LOAN?</p>
+    <p class="h6 text-center text-muted my-3">A Personal Loan helps you address various financial needs conveniently. <br> Major expenses often come up without warning, so dont let them drain all your savings. <br>
+          Here are some common scenarios where you can avail of an instant personal loan:</p>
+</div>
+<div class="card-box">
+   
+   
+    <div class="card-holder" *ngFor=" let card of WhenCard">
+        <mat-card class="example-card1">
+            <mat-card-title>{{card.cardTitle}}</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+            <mat-card-content>
+             
+              <p>{{card.cardBody}}</p>
+            </mat-card-content>
+           
+          </mat-card>
+    </div>
+    
 </div>

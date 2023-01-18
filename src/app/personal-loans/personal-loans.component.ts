@@ -19,6 +19,17 @@ At Tata capital, we strive to ease your financial worries with our range of mult
 
 Besides, we offer flexible loan tenure of up to 6 years, making your loan repayment much easier on your pocket. Get ready to experience a hassle-free loan process like never before – enjoy fast loan processing and customised instant personal loan offerings depending on your diverse financial needs.`;
 
+
+WhenCard:any =[
+  {cardTitle:'Debt Consolidation',cardBody:'Is keeping track of multiple loan instalments becoming a challenge? Manage your personal finances better by consolidating your existing loans into one and clearing dues comfortably. Avail of a quick and easy loan from Tata Capital and reduce your EMI burden considerably.'},
+  
+  {cardTitle:'Start a Small Business',cardBody:'Lay the foundation for your small business without difficulty with Tata Capitals Personal Loan onlineInstant approval and minimal documentation ensure you can get the funds faster and realise your entrepreneurial dream sooner.'},
+
+  {cardTitle:'Make a Down Payment',cardBody:'Struggling to arrange the down payment for the property you want to buy? With Tata Capital, you can book your dream house without any difficulty. Get a personal loan online within minutes of approval and at competitive rates.'},
+  
+  {cardTitle:'Cover Relocation Charges',cardBody:'From transportation charges to buying home essentials, moving from one city to another accompanies a slew of expenses. To make sure the process is easy on your pockets, get an instant personal loan from Tata Capital and repay the amount in flexible EMIs.'},
+]
+
   constructor() { }
 
   ngOnInit(): void {

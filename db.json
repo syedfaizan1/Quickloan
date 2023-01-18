@@ -1,0 +1,64 @@
+{
+  "CustomerArr": [
+    {
+      "Employment_Type": "Salaried",
+      "Mobile": 7083053285,
+      "PAN": "VAME202321",
+      "FName": "Syed Faizan Husain",
+      "LName": "Syed Anjum Husain",
+      "Dob": "2000-01-30T18:30:00.000Z",
+      "Gender": "Male",
+      "Pincode": 444601,
+      "City": "Amravati",
+      "Agreement": true,
+      "id": 1
+    },
+    {
+      "Employment_Type": "Salaried",
+      "Mobile": 7083053285,
+      "PAN": "VAME202321",
+      "FName": "Syed Faizan Husain",
+      "LName": "Syed Anjum Husain",
+      "Dob": "2001-01-21T18:30:00.000Z",
+      "Gender": "Male",
+      "Pincode": 444601,
+      "City": "Amravati",
+      "Agreement": true,
+      "id": 2
+    },
+    {
+      "Mobile": "",
+      "PAN": "",
+      "FName": "",
+      "LName": "",
+      "Dob": "",
+      "Pincode": "",
+      "City": "",
+      "Agreement": false,
+      "id": 3
+    },
+    {
+      "Employment_Type": "Salaried",
+      "Mobile": 8459122861,
+      "PAN": "vame293956",
+      "FName": "faizan Syed",
+      "LName": "Husain",
+      "Dob": "2000-01-01T18:30:00.000Z",
+      "Gender": "Male",
+      "Pincode": 444605,
+      "City": "Amravati",
+      "Agreement": true,
+      "id": 4
+    }
+  ],
+  "loanDetails": [
+    {
+      "PAN": "VAME202321",
+      "Mobile": 7083053285,
+      "loanAmounnt": 500000,
+      "loanIntrest": 10.99,
+      "loanDuration": 24,
+      "id": 1
+    }
+  ]
+}

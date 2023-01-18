@@ -122,6 +122,7 @@
           confirm to the "declaration" provided in the link click
           here</mat-checkbox
         >
+       
         <div class="my-3">
           <button type="submit" mat-raised-button color="primary">
             Continue
@@ -131,9 +132,9 @@
       <button mat-button matStepperNext>Existing Customer</button>
     </mat-step>
     <mat-step [stepControl]="ExistingCustomer">
-      <form [formGroup]="ExistingCustomer">
+      <form  class="existing-customer-step" [formGroup]="ExistingCustomer" (ngSubmit)="getExistingCustomerByMobile()">
         <ng-template matStepLabel>Existing Customer</ng-template>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="text-center">
           <mat-label>Mobile</mat-label>
           <input
             matInput
@@ -142,12 +143,18 @@
             placeholder="Registered Mobile Number"
             required
           /> </mat-form-field
-        ><br />
+        >
+        <br>
+         <button type="submit" mat-raised-button color="primary">
+          Continue
+        </button>
+        
+        <br />
 
-        or <a href="">Skip & continue as a guest</a>
+       <span id="skiplink" (click)="onClickSkip()"> or Skip & continue as a guest</span>
 
         <div>
-          <button mat-button matStepperPrevious>New Customer</button>
+          <button mat-button matStepperPrevious id='NCbtn'>New Customer</button>
           <button mat-button matStepperNext>Track My Application</button>
         </div>
       </form>
